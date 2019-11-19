@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Process>
+  <start name="流程开始" g="681,40,110,50">
+    <transition id="line1" name="to 任务节点1" g="704,88"/>
+  </start>
+  <task id="task1" from="11111111111" name="任务节点1" g="677,136,110,50">
+    <assignment-handler class="com.111"/>
+    <transition id="line2" name="to 任务节点2/null" to="任务节点2" g="697,136,110,50"/>
+  </task>
+  <task id="task2" from="11111111111" name="任务节点2" g="677,136,110,50">
+    <assignment-handler class="com.222"/>
+    <transition id="line2" name="to 任务节点3/null" to="任务节点3" g="697,136,110,50"/>
+  </task>
+  <task id="task3" from="11111111111" name="任务节点3" g="677,136,110,50">
+    <assignment-handler class="com.333"/>
+    <transition id="line2" name="to 流程结束" to="流程结束" g="697,136,110,50"/>
+  </task>
+  <end name="流程结束" g="697,136,110,50"/>
+</Process>
